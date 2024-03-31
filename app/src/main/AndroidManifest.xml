@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="io.github.skincanorg.skincan">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".App"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SkinCan"
+        tools:ignore="LockedOrientationActivity">
+        <activity
+            android:exported="true"
+            android:name=".ui.result.ResultListActivity" />
+        <activity
+            android:exported="true"
+            android:name=".ui.result.ResultActivity" />
+        <activity
+            android:exported="true"
+            android:name=".ui.preference.LicensesActivity" />
+        <activity
+            android:exported="true"
+            android:name=".ui.preference.PreferenceActivity" />
+        <activity
+            android:exported="true"
+            android:name=".ui.preference.ProfileActivity" />
+        <activity
+            android:configChanges="orientation"
+            android:exported="true"
+            android:name=".ui.camera.ScannerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SkinCan.Camera" />
+        <activity
+            android:configChanges="orientation"
+            android:exported="false"
+            android:name=".ui.camera.CameraActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SkinCan.Camera" />
+        <activity
+            android:configChanges="orientation"
+            android:exported="true"
+            android:name=".ui.OnboardingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:configChanges="orientation"
+            android:exported="true"
+            android:name=".ui.auth.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:configChanges="orientation"
+            android:exported="true"
+            android:name=".ui.auth.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:configChanges="orientation"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:name=".ui.main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SkinCan.Starting">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
